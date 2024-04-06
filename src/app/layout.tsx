@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Golos_Text, Cinzel } from "next/font/google";
 import "./globals.css";
+import Header from "./components/Header";
 
 const cinzel = Cinzel({
   subsets: ["latin"],
@@ -23,7 +24,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${golos.variable} ${cinzel.variable}`}>
-      <body className="bg-primary">{children}</body>
+      <body className="bg-primary font-primary">
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
