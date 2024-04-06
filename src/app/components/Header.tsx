@@ -27,7 +27,7 @@ const Header = () => {
           }}
         />
       </div>
-      {!openMenu ? (
+      {openMenu ? (
         <div className="flex flex-col items-center justify-center text-xs gap-3 p-2 py-4 sm:hidden bg-secondary/50 rounded-md">
           <Link href="/">LODGES</Link>
           <Link href="/">CAR CAMPING</Link>

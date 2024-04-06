@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Golos_Text, Cinzel } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 const cinzel = Cinzel({
   subsets: ["latin"],
@@ -27,6 +28,7 @@ export default function RootLayout({
       <body className="bg-primary font-primary">
         <Header />
         {children}
+        <Footer/>
       </body>
     </html>
   );
