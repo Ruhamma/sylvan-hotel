@@ -18,11 +18,79 @@
 
 body {
   color: rgb(var(--foreground-rgb));
- 
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+.hero {
+  background-image: url("/heroimage1.jpg");
+  background-size: cover;
+}
+.input {
+  background: rgba(255, 255, 255, 0.178);
+  box-shadow: 0 2px 3px 0 rgba(1, 29, 21, 0.37);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.popUp {
+  background: rgba(12, 15, 10, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(13px);
+  -webkit-backdrop-filter: blur(13px);
+  border-radius: 10px;
+}
+.nav {
+  background: rgba(12, 15, 10, 0);
+  /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
+  backdrop-filter: blur(14.5px);
+  -webkit-backdrop-filter: blur(14.5px);
+  border-radius: 10px;
+}
+.doodle {
+  background-image: url("/doodle.png");
+  background-size: contain;
+  background-color: rgba(255, 255, 255, 0.6);
+  background-blend-mode: lighten;
+}
+
+.container1,.container2 {
+  position: relative;
+}
+
+.container1:before,.container2:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-image: url("/doodle.png");
+  background-size: contain;
+  opacity: 0.2;
+}
+
+.content,.content2 {
+  position: relative;
+  z-index: 2;
+}
+
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+.dome{
+  border-radius: 640px 640px 0 0;
+  background-image: url("/heroimage1.jpg");
+  background-size: cover;
 }
