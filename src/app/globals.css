@@ -71,7 +71,7 @@ body {
   z-index: 1;
   background-image: url("/doodle.png");
   background-size: contain;
-  opacity: 0.05;
+  opacity: 0.02;
 }
 .container2:before{
   content: "";

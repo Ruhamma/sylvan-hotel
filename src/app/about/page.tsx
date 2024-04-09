@@ -27,7 +27,7 @@ const About = () => {
                 alt="lodge1"
                 width={700}
                 height={700}
-                className="w-[20rem] h-[15rem] md:w-[30rem] md:h-[25rem] lg:w-[40rem] lg:h-[30rem] object-cover"
+                className="w-full sm:w-[20rem] h-[15rem] md:w-[30rem] md:h-[25rem] lg:w-[40rem] lg:h-[30rem] object-cover"
               />
               <p className="pt-2 font-[500] ">Enjoy sunsets over dinner at a</p>
             </div>
@@ -37,7 +37,7 @@ const About = () => {
                 alt="lodge1"
                 width={700}
                 height={700}
-                className="w-[20rem] h-[15rem] md:w-[30rem] md:h-[25rem] lg:w-[40rem] lg:h-[30rem] object-cover"
+                className="w-full sm:w-[20rem] h-[15rem] md:w-[30rem] md:h-[25rem] lg:w-[40rem] lg:h-[30rem] object-cover"
               />
               <p className="pt-2 font-[500] ">
                 Yoga practices in the silence of the retreat <br /> areas
@@ -51,7 +51,7 @@ const About = () => {
                 alt="lodge1"
                 width={700}
                 height={700}
-                className="w-[20rem] h-[15rem] md:w-[30rem] md:h-[25rem] lg:w-[40rem] lg:h-[30rem] object-cover"
+                className="w-full sm:w-[20rem] h-[15rem] md:w-[30rem] md:h-[25rem] lg:w-[40rem] lg:h-[30rem] object-cover"
               />
               <p className="pt-2 font-[500] ">
                 Be inspired by the mesmerizing views <br /> while staying in
@@ -64,7 +64,7 @@ const About = () => {
                 alt="lodge1"
                 width={700}
                 height={700}
-                className="w-[20rem] h-[15rem] md:w-[30rem] md:h-[25rem] lg:w-[40rem] lg:h-[30rem] object-cover"
+                className="w-full sm:w-[20rem] h-[15rem] md:w-[30rem] md:h-[25rem] lg:w-[40rem] lg:h-[30rem] object-cover"
               />
               <p className="pt-2 font-[500] ">
                 Filling with tranquility and freedom while <br />
