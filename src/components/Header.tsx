@@ -12,11 +12,11 @@ const Header = () => {
         <p className="text-xl font-bold">SYLVAN</p>
         <div className="hidden gap-6 sm:flex ">
           <Link href="/">LODGES</Link>
-          <Link href="/">CAR CAMPING</Link>
+          <Link href="/car-camping">CAR CAMPING</Link>
         </div>
         <div className="hidden gap-6 sm:flex ">
           <Link href="/">ABOUT</Link>
-          <Link href="/">CONTACTS</Link>
+          <Link href="/contact">CONTACTS</Link>
         </div>
         <p className="md:block hidden">+1 123 456 78 99 41</p>
         <RxHamburgerMenu
@@ -29,10 +29,10 @@ const Header = () => {
       </div>
       {openMenu ? (
         <div className="flex flex-col items-center justify-center text-xs gap-3 p-2 py-4 sm:hidden popUp rounded-md">
-          <Link href="/">LODGES</Link>
+          <Link href="/lodge">LODGES</Link>
           <Link href="/">CAR CAMPING</Link>
-          <Link href="/">ABOUT</Link>
-          <Link href="/">CONTACTS</Link>
+          <Link href="/about">ABOUT</Link>
+          <Link href="/contact">CONTACTS</Link>
           <p>+1 123 456 78 99 41</p>
         </div>
       ) : null}

@@ -98,7 +98,7 @@ export default function Home() {
                 </div>
                 <div className="flex gap-2">
                   <BsArrowsAngleExpand />
-                  <p>45 m2</p>
+                  <p>45 m<sup>2</sup></p>
                 </div>
               </div>
               <p className="font-semibold text-xl">
@@ -150,7 +150,7 @@ export default function Home() {
                 </div>
                 <div className="flex gap-2">
                   <BsArrowsAngleExpand />
-                  <p>65 m2</p>
+                  <p>65 m<sup>2</sup></p>
                 </div>
               </div>
               <p className="font-semibold text-xl">
@@ -175,7 +175,7 @@ export default function Home() {
         </div>
 
         <div className="flex items-center justify-center my-10">
-          <Link href="/lodges" className="text-text2 mx-auto w-fit ">
+          <Link href="/lodge" className="text-text2 mx-auto w-fit ">
             SHOW MORE LODGES
           </Link>
         </div>

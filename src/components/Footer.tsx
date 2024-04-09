@@ -4,7 +4,7 @@ import React from "react";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 const Footer = () => {
   return (
-    <footer className="flex flex-col text-black-100  mt-5 relative bg-tertiary p-4 px-10 pt-4">
+    <footer className="flex flex-col text-black-100 relative bg-tertiary p-4 px-10 pt-4">
       <div className="flex gap-10 sm:gap-0   sm:flex-row flex-wrap flex-col justify-between mb-6 ">
         <div className="flex flex-col gap-3">
           <p className="text-lg font-bold">SYLVAN</p>
@@ -26,7 +26,7 @@ const Footer = () => {
         </div>
         <div className="flex flex-col gap-2 text-sm ">
           <Link href="/about">About</Link>
-          <Link href="/lodges">Lodges</Link>
+          <Link href="/lodge">Lodges</Link>
           <Link href="/car-camping">Car Camping</Link>
           <Link href="/contacts">Contacts</Link>
         </div>
