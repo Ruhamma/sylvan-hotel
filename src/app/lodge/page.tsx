@@ -198,13 +198,13 @@ const lodge = () => {
         </div>
         <div className="p-5 w-full mt-10 flex sm:flex-row flex-col-reverse justify-center items-center  gap-10">
           <div className=" sm:w-[40%] ">
-            <p className="text-text text-sm">LODGE #1</p>
+            <p className="text-text text-sm">LODGE #3</p>
             <p className=" sm:block hidden text-2xl md:text-3xl font-[500] mb-5">
-              Cozy small romantic house with <br />
-              panoramic view
+              Cozy wooden atmospheric lodge with <br />
+              mountain view
             </p>
             <p className="text-2xl sm:hidden sm:text-3xl font-[500] mb-5">
-              Cozy small romantic house with panoramic view
+              Cozy wooden atmospheric lodge with mountain view
             </p>
             <p className="text-text text-sm md:text-base mb-4 ">
               Electric kettle, miniFridge, air conditioning, towels bathrobes

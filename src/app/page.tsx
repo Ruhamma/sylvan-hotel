@@ -233,7 +233,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="book" className=" text-WHITE bg-secondary ">
+      <section id="book" className=" text-WHITE bg-secondary bg-{url('/leaf.png')}">
         <div className="title p-5 sm:p-10">
           <p className="text-text">TESTIMONIALS</p>
           <p className="font-secondary text-3xl sm:pt-0 pt-10 font-semibold sm:font-normal sm:text-5xl lg:text-7xl sm:text-right sm:pr-20 ">

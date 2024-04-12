@@ -1,7 +1,47 @@
+"use client";
 import Image from "next/image";
-import React from "react";
-
+import React, { useEffect, useState } from "react";
+import Stepper from "@/components/Stepper";
+import StepperControl from "@/components/StepperConrol";
+import Account from "@/components/steps/Account.jsx";
+import Details from "@/components/steps/Details.jsx";
+import Payment from "@/components/steps/Payment.jsx";
+import Final from "@/components/steps/Final.jsx";
+import {
+  UseContextProvider,
+  useStepperContext,
+} from "../../contexts/StepperContext";
 const CarCamping = () => {
+  const [currentStep, setCurrentStep] = useState(1);
+  const { userData, isFormValid } = useStepperContext();
+
+  useEffect(() => {
+    console.log("Current userData:", userData);
+  }, [userData]);
+  const steps = [" ", " ", " ", " "];
+
+  const displayStep = (step: number) => {
+    switch (step) {
+      case 1:
+        return <Account />;
+      case 2:
+        return <Details />;
+      case 3:
+        return <Payment />;
+      case 4:
+        return <Final />;
+      default:
+    }
+  };
+
+  const handleClick = (direction: string) => {
+    let newStep = currentStep;
+
+    direction === "next" ? newStep++ : newStep--;
+    // check if steps are within bounds
+    newStep > 0 && newStep <= steps.length && setCurrentStep(newStep);
+  };
+
   return (
     <div className="min-h-screen">
       <div className="title px-5 pt-5 sm:px-10 sm:pt-10 mt-20 text-black ">
@@ -136,6 +176,44 @@ const CarCamping = () => {
                 Shared facilities (toilets, showers, kitchen)
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+      <section className="bg-secondary">
+        <div className="title px-5 pt-5 sm:px-10 sm:pt-10 mt-20 text-white ">
+          <p className="text-text">CONTACTS</p>
+          <div className="sm:hidden block font-secondary font-semibold text-3xl sm:pt-0 pt-5  sm:font-normal sm:text-5xl lg:text-7xl sm:text-right sm:pr-20">
+            BOOK A CAR CAMPING AND TRAVEL IN COMFORT
+          </div>
+          <div className=" sm:block hidden space-y-2 font-secondary text-5xl sm:pt-0 pt-5 font-[500] sm:font-normal sm:text-5xl lg:text-7xl sm:text-right sm:pr-20 ">
+            <p className="sm:text-right">
+              <span className="container2 bg-cover ">
+                <span className="content2"> BOOK </span>
+              </span>{" "}
+              A CAR CAMPING
+            </p>
+            <p className="sm:text-left">AND TRAVEL IN COMFORT</p>
+          </div>
+        </div>
+
+        <div className="booking mt-10 flex justify-center  p-10 gap-10 ">
+          <div className="w-full lg:w-[60%] ">
+            <div className="horizontal   ">
+              <Stepper steps={steps} currentStep={currentStep} />
+
+              <div className="sm:p-10 ">
+                <UseContextProvider>
+                  {displayStep(currentStep)}
+                </UseContextProvider>
+              </div>
+            </div>
+            {currentStep !== steps.length && (
+              <StepperControl
+                handleClick={handleClick}
+                currentStep={currentStep}
+                steps={steps}
+              />
+            )}
           </div>
         </div>
       </section>

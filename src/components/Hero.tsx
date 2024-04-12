@@ -1,13 +1,20 @@
 "use client";
 import { useState } from "react";
-
+import { useRouter } from "next/router";
 const Hero = () => {
   const [checkIn, setCheckIn] = useState(new Date());
   const [checkOut, setCheckOut] = useState(new Date());
   const [amount, setAmount] = useState(1);
-  const handleSubmit = () => {
-    // e.preventDefault();
-    console.log(checkIn, checkOut, amount);
+  // const router = useRouter();
+
+  const handleSubmit = (e: { preventDefault: () => void }) => {
+    e.preventDefault();
+    // const queryParams = new URLSearchParams({
+    //   checkIn: checkIn.toISOString().split("T")[0],
+    //   checkOut: checkOut.toISOString().split("T")[0],
+    //   amount: amount.toString(),
+    // });
+    // router.push(`/book?${queryParams.toString()}`);
   };
   return (
     <div className="relative min-h-screen font-secondary ">
