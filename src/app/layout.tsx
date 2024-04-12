@@ -1,9 +1,10 @@
+"use client"
 import type { Metadata } from "next";
 import { Golos_Text, Cinzel } from "next/font/google";
 import "./globals.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-
+import { Toaster, toast } from "sonner";
 const cinzel = Cinzel({
   subsets: ["latin"],
   variable: "--secondary-font",
@@ -13,10 +14,6 @@ const golos = Golos_Text({
   weight: ["400", "500"],
   variable: "--primary-font",
 });
-export const metadata: Metadata = {
-  title: "The Sylvan",
-  description: "Immerse yourself in nature's luxury at The Sylvan Sanctuary",
-};
 
 export default function RootLayout({
   children,
@@ -29,6 +26,19 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <Toaster
+          position="top-left"
+          toastOptions={{
+            classNames: {
+              toast: "bg-secondary",
+              title: "text-white",
+              description: "text-white",
+              actionButton: "bg-zinc-400",
+              cancelButton: "bg-orange-400",
+              closeButton: "bg-lime-400",
+            },
+          }}
+        />
       </body>
     </html>
   );

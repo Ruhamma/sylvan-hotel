@@ -44,11 +44,10 @@ body {
   border-radius: 10px;
 }
 .nav {
-  background: rgba(12, 15, 10, 0);
+  background: rgba(12, 15, 10, 0.6);
   /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
   backdrop-filter: blur(14.5px);
   -webkit-backdrop-filter: blur(14.5px);
-  border-radius: 10px;
 }
 .doodle {
   background-image: url("/doodle.png");
@@ -58,7 +57,8 @@ body {
 }
 
 .container1,
-.container2 {
+.container2,
+.leafContainer {
   position: relative;
 }
 
@@ -86,8 +86,21 @@ body {
   background-size: contain;
   opacity: 0.2;
 }
+.leafContainer:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-image: url("/leaf.png");
+  background-size: contain;
+  opacity: 0.1;
+}
 .content,
-.content2 {
+.content2,
+.leafContent {
   position: relative;
   z-index: 2;
 }
@@ -104,7 +117,7 @@ body {
 }
 .dome {
   border-radius: 640px 640px 0 0;
-  background-image: url("/heroimage1.jpg");
+  background-image: url("/bb.jpg");
   background-size: cover;
 }
 
