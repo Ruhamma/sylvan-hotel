@@ -34,8 +34,8 @@ const lodges: Lodge[] = [
 type DateLike = Date | string;
 
 const getQueryStringParameter = (paramName: string) => {
-  const urlParams = new URLSearchParams(window.location.search);
-  return urlParams.get(paramName);
+  const searchParams = useSearchParams(); 
+  return searchParams.get(paramName) || null;
 };
 const pages = () => {
   const [checkIn, setCheckIn] = useState<DateLike>(
