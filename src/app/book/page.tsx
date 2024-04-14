@@ -2,6 +2,7 @@
 import Banner from "@/components/Banner";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
 interface Lodge {
   id: number;
   name: string;
@@ -50,6 +51,15 @@ const pages = () => {
     const lodgeId = parseInt(event.target.value);
     setSelectedLodge(lodges.find((lodge) => lodge.id === lodgeId) || null); // Find lodge by ID or set to null
   };
+
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    const lodgeId = parseInt(searchParams.get("lodgeId") || "");
+    const lodge = lodges.find((lodge) => lodge.id === lodgeId) || null;
+    setSelectedLodge(lodge);
+  }, []);
+
   const handleCheckInChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setCheckIn(event.target.value);
   };

@@ -1,16 +1,39 @@
+"use client";
 import Banner from "@/components/Banner";
 import Image from "next/image";
-import React from "react";
+import Link from "next/link";
+import React, { useState } from "react";
 import { BsArrowsAngleExpand } from "react-icons/bs";
 import { FaUmbrellaBeach } from "react-icons/fa";
 import { FaDoorOpen } from "react-icons/fa6";
 import { IoBed, IoPersonOutline } from "react-icons/io5";
 import { LuShowerHead } from "react-icons/lu";
+import { toast } from "sonner";
 
 const lodge = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    comment: "",
+  });
+  const handleChange = (e: { target: { name: any; value: any } }) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+  const handleSubmit = (e: { preventDefault: () => void }) => {
+    e.preventDefault();
+    toast(`Thanks for the comment!.`);
+    setFormData({
+      name: "",
+      email: "",
+      comment: "",
+    });
+  };
   return (
     <div className="min-h-screen ">
-      <Banner title="ALL THE LODGES ARE CAREFULLY INTEGRATED INTO NATURE RESERVE" />
+      <Banner
+        title="ALL THE LODGES ARE CAREFULLY INTEGRATED INTO NATURE RESERVE"
+        bgUrl="/lodgeHero.jpg"
+      />
       <div className="title p-5 sm:p-10 ">
         <p className="text-text">LODGES</p>
         <div className="font-secondary space-y-3 text-3xl sm:pt-0 pt-10 font-semibold sm:font-light sm:text-5xl lg:text-6xl sm:text-right sm:pr-20 text-black ">
@@ -39,29 +62,29 @@ const lodge = () => {
             </p>
           </div>
           <div className="pt-2 sm:p-5  lg:w-[30%] space-y-2">
-            <p>COMFORTABLE LIVING</p>
-            <p className="text-sm">
-              Inspiration by the mesmerizing views while staying in rooms or car
-              camping.The sylvan hotel is a living forest with wooden huts and
-              ares for relaxing and practicing in nature
+            <p>YOGA AREA</p>
+            <p className="text-sm  lowercase">
+              Breathtaking views from the covered area with a natural wood
+              floor, perfect for yoga and meditation. It's 65 square meters and
+              soars among the foliage, high above the ground.
             </p>
           </div>
         </div>
         <div className="flex sm:flex-row flex-col justify-end item-center w-full gap-10 lg:gap-40 px-5 sm:px-10">
           <div className="pt-2 sm:p-5 lg:w-[30%] space-y-2">
-            <p>COMFORTABLE LIVING</p>
+            <p>VIEW CAFE</p>
             <p className="text-sm">
-              Inspiration by the mesmerizing views while staying in rooms or car
-              camping.The sylvan hotel is a living forest with wooden huts and
-              ares for relaxing and practicing in nature
+              It's place where stunning views greet you at breakfast and sunset
+              at dinner.This is where guests meet and socialize.Unlimited,free
+              Wi-Fi available.On chilly evenings,we stoke the furnace
             </p>
           </div>
           <div className="pt-2 sm:p-5  lg:w-[30%] space-y-2">
-            <p>COMFORTABLE LIVING</p>
+            <p>RECREATION AREA</p>
             <p className="text-sm">
-              Inspiration by the mesmerizing views while staying in rooms or car
-              camping.The sylvan hotel is a living forest with wooden huts and
-              ares for relaxing and practicing in nature
+              Our mandarin orchard and forest is filled with secluded nooks with
+              hammocks,places to read and relax under shady crowns.If you visit
+              in the fall,taste the harvest straight from the branches.
             </p>
           </div>
         </div>
@@ -116,16 +139,16 @@ const lodge = () => {
               </p>
             </div>
             <div className="flex sm:flex-row flex-col gap-4 ">
-              <button
-                type="submit"
+              <Link
+                href={`/book?lodgeId=1`}
                 className="bg-secondary hover:bg-secondary/50  text-white px-20 py-2  font-primary font-medium  "
               >
                 Book
-              </button>
+              </Link>
             </div>
           </div>
           <Image
-            src="/heroimage1.jpg"
+            src="/lodge1.jpg"
             alt="lodge1"
             width={700}
             height={700}
@@ -134,7 +157,7 @@ const lodge = () => {
         </div>
         <div className=" p-5 mt-10 flex sm:flex-row flex-col justify-center items-center md:items-end gap-10">
           <Image
-            src="/heroimage1.jpg"
+            src="/lodge2.jpg"
             alt="lodge1"
             width={700}
             height={700}
@@ -187,12 +210,12 @@ const lodge = () => {
               </p>
             </div>
             <div className="flex sm:flex-row flex-col gap-4 ">
-              <button
-                type="submit"
+              <Link
+                href={`/book?lodgeId=2`}
                 className="bg-secondary hover:bg-secondary/50  text-white px-20 py-2  font-primary font-medium  "
               >
                 Book
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -245,16 +268,16 @@ const lodge = () => {
               </p>
             </div>
             <div className="flex sm:flex-row flex-col gap-4 ">
-              <button
-                type="submit"
+              <Link
+                href={`/book?lodgeId=3`}
                 className="bg-secondary hover:bg-secondary/50  text-white px-20 py-2  font-primary font-medium  "
               >
                 Book
-              </button>
+              </Link>
             </div>
           </div>
           <Image
-            src="/heroimage1.jpg"
+            src="/lodge3.jpg"
             alt="lodge1"
             width={700}
             height={700}
@@ -263,7 +286,7 @@ const lodge = () => {
         </div>
         <div className=" p-5 mt-10 flex sm:flex-row flex-col justify-center items-center md:items-end gap-10">
           <Image
-            src="/heroimage1.jpg"
+            src="/lodge4.jpg"
             alt="lodge1"
             width={700}
             height={700}
@@ -318,12 +341,12 @@ const lodge = () => {
               </p>
             </div>
             <div className="flex sm:flex-row flex-col gap-4 ">
-              <button
-                type="submit"
+              <Link
+                href={`/book?lodgeId=4`}
                 className="bg-secondary hover:bg-secondary/50  text-white px-20 py-2  font-primary font-medium  "
               >
                 Book
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -334,7 +357,7 @@ const lodge = () => {
             DIDN'T FIND
             <br />
             <p className="container1 bg-cover xl:mr-28">
-              <p className="content">YOURSELF A</p>{" "}
+              <span className="content">YOURSELF A</span>{" "}
             </p>
             SUITABLE LODGE?
           </p>
@@ -344,7 +367,7 @@ const lodge = () => {
           </p>
         </div>
         <div className="">
-          <form action="" className="my-10 flex flex-col gap-6 ">
+          <form onSubmit={handleSubmit} className="my-10 flex flex-col gap-6 ">
             <div className="flex gap-2 flex-wrap ">
               <div className="flex flex-col gap-1 w-full sm:w-fit">
                 <label htmlFor="name" className="text-text2">
@@ -355,6 +378,9 @@ const lodge = () => {
                   className="px-4 py-2 border-text outline-2 border-2 bg-primary w-full"
                   placeholder="Ivan Pavlov"
                   required
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
                 />
               </div>
               <div className="flex flex-col gap-1 w-full sm:w-fit">
@@ -366,6 +392,9 @@ const lodge = () => {
                   className="px-4 py-2 border-text outline-2 border-2 bg-primary"
                   placeholder="Ivan@gmail.com"
                   required
+                  name="email"
+                  onChange={handleChange}
+                  value={formData.email}
                 />
               </div>
             </div>
@@ -379,6 +408,9 @@ const lodge = () => {
                   placeholder="Enter your comment here"
                   required
                   rows={6}
+                  name="comment"
+                  value={formData.comment}
+                  onChange={handleChange}
                 ></textarea>
               </div>
               <button

@@ -3,7 +3,7 @@ import React from "react";
 
 const Banner = ({ bgUrl, title }: BannerProps) => {
   return (
-    <div className="relative min-h-screen font-secondary h-fit ">
+    <div className="relative min-h-[90vh] font-secondary h-fit ">
       <div className="w-full object-cover object-center h-[90vh] absolute top-[-50px] left-0  bg-tertiary/70 z-20"></div>
       <div
         style={{ backgroundImage: `url(${bgUrl})` }}
