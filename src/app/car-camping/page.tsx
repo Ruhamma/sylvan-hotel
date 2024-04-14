@@ -10,7 +10,7 @@ import Final from "@/components/steps/Final.jsx";
 import {
   UseContextProvider,
   useStepperContext,
-} from "@/contexts/StepperContext.js";
+} from "@/app/contexts/StepperContext.js";
 import { Element, Link, animateScroll as scroll } from "react-scroll";
 
 const CarCamping = () => {
