@@ -58,7 +58,7 @@ const Hero = () => {
               type="date"
               name="checkIn"
               id="checkIn"
-              className="input p-2"
+              className="input p-2 w-full"
               min={today}
               onChange={handleChange}
               value={formData.checkIn}
@@ -72,7 +72,7 @@ const Hero = () => {
               type="date"
               name="checkOut"
               id="checkOut"
-              className="input p-2"
+              className="input p-2 w-full"
               min={today}
               onChange={handleChange}
               value={formData.checkOut}

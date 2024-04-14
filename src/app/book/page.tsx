@@ -118,7 +118,7 @@ const pages = () => {
                       type="date"
                       name="checkIn"
                       id="checkIn"
-                      className="border-secondary border-[1px] bg-transparent p-2 px-1 text-sm text-text"
+                      className="border-secondary border-[1px] bg-transparent p-2 px-1 text-sm text-text w-full"
                       required
                       value={checkIn.toString()}
                       onChange={handleCheckInChange}
@@ -132,7 +132,7 @@ const pages = () => {
                       type="date"
                       name="checkOut"
                       id="checkOut"
-                      className="border-secondary border-[1px] bg-transparent p-2 px-1 text-sm text-text"
+                      className="border-secondary border-[1px] bg-transparent p-2 px-1 text-sm text-text w-full"
                       required
                       onChange={handleCheckOutChange}
                       value={checkOut.toString()} // Convert checkOut to a string
@@ -263,7 +263,7 @@ const pages = () => {
                       type="time"
                       name="checkInTime"
                       id="checkInTime"
-                      className="border-secondary border-[1px] bg-transparent p-2 px-1 text-sm text-text"
+                      className="border-secondary border-[1px] bg-transparent p-2 px-1 text-sm text-text w-full"
                     />
                   </div>
                   <div className="flex flex-col gap-1 w-full">
@@ -277,7 +277,7 @@ const pages = () => {
                       type="time"
                       name="checkOutTime"
                       id="checkOutTime"
-                      className="border-secondary border-[1px] bg-transparent p-2 px-1 text-sm text-text"
+                      className="border-secondary border-[1px] bg-transparent p-2 px-1 text-sm text-text w-full"
                     />
                   </div>
                 </div>

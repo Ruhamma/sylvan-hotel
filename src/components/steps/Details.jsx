@@ -25,7 +25,7 @@ export default function Details() {
               type="time"
               name="checkInTime"
               id="checkInTime"
-              className="border-white border-[1px] bg-transparent p-2 px-1 text-sm text-text"
+              className="border-white border-[1px] bg-transparent p-2 px-1 text-sm text-text w-full"
               onChange={handleChange}
               value={userData["checkInTime"] || ""}
             />
@@ -38,7 +38,7 @@ export default function Details() {
               type="time"
               name="checkOutTime"
               id="checkOutTime"
-              className="border-white border-[1px] bg-transparent p-2 px-1 text-sm text-text"
+              className="border-white border-[1px] bg-transparent p-2 px-1 text-sm text-text w-full"
               onChange={handleChange}
               value={userData["checkOutTime"] || ""}
             />

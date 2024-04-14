@@ -22,7 +22,7 @@ export default function Account() {
               type="date"
               name="checkIn"
               id="checkIn"
-              className="border-white border-[1px] bg-transparent p-2 px-1 text-sm text-text"
+              className="border-white border-[1px] bg-transparent p-2 px-1 text-sm text-text w-full"
               onChange={handleChange}
               value={userData["checkIn"] || ""}
               required
@@ -36,7 +36,7 @@ export default function Account() {
               type="date"
               name="checkOut"
               id="checkOut"
-              className="border-white border-[1px] bg-transparent p-2 px-1 text-sm text-text"
+              className="border-white border-[1px] bg-transparent p-2 px-1 text-sm text-text w-full"
               onChange={handleChange}
               value={userData["checkOut"] || ""}
               required
