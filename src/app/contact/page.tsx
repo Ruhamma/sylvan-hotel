@@ -10,13 +10,13 @@ const contact = () => {
       <div className="flex sm:flex-row flex-col gap-2 py-10 sm:items-end">
         <div className="title px-5 pt-5 sm:px-10 sm:pt-10 sm:w-[60%]  ">
           <p className="text-text">CONTACTS</p>
-          <p className="font-secondary text-5xl sm:pt-0 pt-5 font-[500] sm:font-normal sm:text-5xl lg:text-7xl sm:text-right sm:pr-20 ">
+          <div className="font-secondary text-5xl sm:pt-0 pt-5 font-[500] sm:font-normal sm:text-5xl lg:text-7xl sm:text-right sm:pr-20 ">
             ALWAYS STAY <br />
             <p className="contaier1 bg-cover xl:mr-28">
-              <p className="conent">IN TOUCH</p>{" "}
+              <span className="conent">IN TOUCH</span>{" "}
             </p>
             WITH US
-          </p>
+          </div>
         </div>
         <div className="px-5 flex flex-col sm:flex-row gap-10 sm:gap-20 justify-between sm:w-[40%] sm:items-end">
           <div className="flex flex-col gap-5 sm:w-1/2">

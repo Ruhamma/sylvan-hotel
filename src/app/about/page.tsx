@@ -7,7 +7,7 @@ import React from "react";
 const About = () => {
   return (
     <div className="min-h-screen ">
-      <Banner title="A place to contemplate sunset,de-stress and replenish resources" />
+      <Banner title="A place to contemplate sunset, de-stress and replenish resources" bgUrl="/aboutHero.jpg"/>
       <section className="text-black">
         <div className="title p-5 sm:p-10 ">
           <p className="text-text">ABOUT US</p>
@@ -23,7 +23,7 @@ const About = () => {
           <div className="lg:w-[25%] sm:h-[200vh] 2xl:h-full flex flex-col  sm:gap-40 items-center justify-center">
             <div className="w-full">
               <Image
-                src="/heroimage1.jpg"
+                src="/sunset.jpg"
                 alt="lodge1"
                 width={700}
                 height={700}
@@ -33,7 +33,7 @@ const About = () => {
             </div>
             <div className="w-full">
               <Image
-                src="/heroimage1.jpg"
+                src="/yoga2.jpg"
                 alt="lodge1"
                 width={700}
                 height={700}
@@ -47,7 +47,7 @@ const About = () => {
           <div className="sm:h-[200vh] flex flex-col sm:gap-52 w-fit ">
             <div className="w-full">
               <Image
-                src="/heroimage1.jpg"
+                src="/view.jpg"
                 alt="lodge1"
                 width={700}
                 height={700}
@@ -60,7 +60,7 @@ const About = () => {
             </div>
             <div className="w-full">
               <Image
-                src="/heroimage1.jpg"
+                src="/forest.jpg"
                 alt="lodge1"
                 width={700}
                 height={700}
@@ -103,7 +103,7 @@ const About = () => {
         <div className="flex sm:flex-row flex-col text-tertiary gap-10 justify-center items-end p-10 w-full">
           <div className="flex flex-col sm:w-[25%]">
             <Image
-              src="/heroimage1.jpg"
+              src="/carCamp.jpg"
               alt="lodge1"
               width={700}
               height={700}
@@ -118,7 +118,7 @@ const About = () => {
           </div>
           <div className="flex flex-col sm:w-[25%]">
             <Image
-              src="/heroimage1.jpg"
+              src="/yoga3.jpg"
               alt="lodge1"
               width={700}
               height={700}
@@ -128,7 +128,7 @@ const About = () => {
           </div>
           <div className="flex flex-col sm:w-[25%]">
             <Image
-              src="/heroimage1.jpg"
+              src="/cafe2.jpg"
               alt="lodge1"
               width={700}
               height={700}
@@ -162,7 +162,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className="dome mt-10 h-[40rem] flex items-center justify-center ">
+        <div className="dome2 mt-10 h-[40rem] flex items-center justify-center ">
           <div className="w-[50%] flex flex-col justify-center items-center gap-4"></div>
         </div>
       </section>

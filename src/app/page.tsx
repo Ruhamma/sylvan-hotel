@@ -472,7 +472,7 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className="flex flex-col  sm:w-[25%]">
+          <div className="flex flex-col w-full sm:w-[25%]">
             <Image
               src="/yoga.jpg"
               alt="lodge1"
@@ -482,7 +482,7 @@ export default function Home() {
             />
             <p className="font-semibold ">YOGA CENTER </p>
           </div>
-          <div className="flex flex-col  sm:w-[25%]">
+          <div className="flex flex-col w-full sm:w-[25%]">
             <Image
               src="/cafe.jpg"
               alt="lodge1"
@@ -693,7 +693,13 @@ export default function Home() {
               onClick={() => setSelectedQuestion("HA")}
             >
               {selectedQuestion == "HA" && (
-                <Image src="/branch1.png" width={40} height={40} alt="branch" />
+                <Image
+                  src="/branch1.png"
+                  width={40}
+                  height={40}
+                  alt="branch"
+                  className="sm:block hidden"
+                />
               )}
               <p
                 className={`${
@@ -710,7 +716,13 @@ export default function Home() {
               onClick={() => setSelectedQuestion("RC")}
             >
               {selectedQuestion == "RC" && (
-                <Image src="/branch1.png" width={40} height={40} alt="branch" />
+                <Image
+                  src="/branch1.png"
+                  width={40}
+                  height={40}
+                  alt="branch"
+                  className="sm:block hidden"
+                />
               )}
               <p
                 className={`${
@@ -727,7 +739,13 @@ export default function Home() {
               onClick={() => setSelectedQuestion("AS")}
             >
               {selectedQuestion == "AS" && (
-                <Image src="/branch1.png" width={40} height={40} alt="branch" />
+                <Image
+                  src="/branch1.png"
+                  width={40}
+                  height={40}
+                  alt="branch"
+                  className="sm:block hidden"
+                />
               )}
               <p
                 className={`${

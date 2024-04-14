@@ -10,10 +10,12 @@ import Final from "@/components/steps/Final.jsx";
 import {
   UseContextProvider,
   useStepperContext,
-} from "../../contexts/StepperContext";
+} from "@/contexts/StepperContext.js";
+import { Element, Link, animateScroll as scroll } from "react-scroll";
+
 const CarCamping = () => {
   const [currentStep, setCurrentStep] = useState(1);
-  const { userData, isFormValid } = useStepperContext();
+  const { userData } = useStepperContext();
 
   useEffect(() => {
     console.log("Current userData:", userData);
@@ -79,21 +81,23 @@ const CarCamping = () => {
                 trees in a photogenic location with
                 <> free services</>
               </p>
-              <div className="my-5 sm:mt-20 space-y-4">
+              <div className="my-5 sm:mt-20 flex flex-col gap-1 w-fit">
                 <p className="font-semibold text-xl">
                   30$<span className="text-sm text-text2">/day</span>
                 </p>
-                <button
-                  type="submit"
-                  className="bg-secondary hover:bg-secondary/50  text-white px-12 py-2 self-end font-primary font-medium  "
+                <Link
+                  to="form"
+                  smooth={true} // Enable smooth scrolling
+                  offset={-10}
+                  className="bg-secondary hover:bg-secondary/50  text-white px-12 py-2 my-2 self-end font-primary font-medium  "
                 >
                   Book
-                </button>
+                </Link>
               </div>
             </div>
             <div className="w-full">
               <Image
-                src="/heroimage1.jpg"
+                src="/cafe2.jpg"
                 alt="lodge1"
                 width={700}
                 height={700}
@@ -105,7 +109,7 @@ const CarCamping = () => {
           <div className="sm:h-fit flex flex-col sm:gap-52 sm:w-fit ">
             <div className="w-full">
               <Image
-                src="/heroimage1.jpg"
+                src="/toil.jpg"
                 alt="lodge1"
                 width={700}
                 height={700}
@@ -154,32 +158,32 @@ const CarCamping = () => {
             </div>
             <div className="w-full">
               <Image
-                src="/heroimage1.jpg"
+                src="/laura.jpg"
                 alt="lodge1"
                 width={700}
                 height={700}
                 className="w-full sm:w-[20rem]  h-[15rem] sm:h-[25rem] md:w-[30rem] md:h-[35rem] lg:w-[40rem] lg:h-[40rem] object-cover"
               />
-              <p className="pt-2 font-[500] ">WIFI in cafes,rest areas</p>
+              <p className="pt-2 font-[500] ">Clean drinking water</p>
             </div>
           </div>
           <div className="sm:h-fit flex flex-col sm:gap-52 sm:w-fit ">
             <div className="w-full">
               <Image
-                src="/heroimage1.jpg"
+                src="/motor.jpg"
                 alt="lodge1"
                 width={700}
                 height={700}
                 className="w-full sm:w-[20rem]  h-[15rem] sm:h-[25rem] md:w-[30rem] md:h-[35rem] lg:w-[40rem] lg:h-[40rem] object-cover"
               />
               <p className="pt-2 font-[500] ">
-                Shared facilities (toilets, showers, kitchen)
+                Electricity to recharge motorhomes and gadgets
               </p>
             </div>
           </div>
         </div>
       </section>
-      <section className="bg-secondary">
+      <Element name="form" className="bg-secondary" id="form">
         <div className="title px-5 pt-5 sm:px-10 sm:pt-10 mt-20 text-white ">
           <p className="text-text">CONTACTS</p>
           <div className="sm:hidden block font-secondary font-semibold text-3xl sm:pt-0 pt-5  sm:font-normal sm:text-5xl lg:text-7xl sm:text-right sm:pr-20">
@@ -216,7 +220,7 @@ const CarCamping = () => {
             )}
           </div>
         </div>
-      </section>
+      </Element>
     </div>
   );
 };

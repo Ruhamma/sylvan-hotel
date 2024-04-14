@@ -119,6 +119,12 @@ body {
   background-image: url("/bb.jpg");
   background-size: cover;
 }
+.dome2 {
+  border-radius: 640px 640px 0 0;
+  background-image: url("/top.jpg");
+  background-size: cover;
+}
+
 
 .progress::before {
   content: "";
