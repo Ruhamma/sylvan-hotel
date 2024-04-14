@@ -31,9 +31,18 @@ const lodges: Lodge[] = [
   },
 ];
 type DateLike = Date | string;
+
+const getQueryStringParameter = (paramName: string) => {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(paramName);
+};
 const pages = () => {
-  const [checkIn, setCheckIn] = useState<DateLike>("");
-  const [checkOut, setCheckOut] = useState<DateLike>("");
+  const [checkIn, setCheckIn] = useState<DateLike>(
+    getQueryStringParameter("checkIn") || ""
+  );
+  const [checkOut, setCheckOut] = useState<DateLike>(
+    getQueryStringParameter("checkOut") || ""
+  );
   const [numDays, setNumDays] = useState(0);
   const [selectedLodge, setSelectedLodge] = useState<Lodge | null>(null); // State for lodge selection (type Lodge or null)
 
@@ -79,13 +88,16 @@ const pages = () => {
 
   return (
     <div>
-      <Banner title="Book YOUR ROOM NOW AND TAKE 20% OFF ON WEEKDAY STAYS" />
+      <Banner
+        title="Book YOUR ROOM NOW AND TAKE 20% OFF ON WEEKDAY STAYS"
+        bgUrl="/bookingHero.jpg"
+      />
       <div className="booking flex justify-center  p-10 gap-10 ">
         <div className="w-full lg:w-[60%] ">
           <form onSubmit={handleSubmit}>
             <div className="flex flex-col text-secondary">
               <div className="form1  space-y-2 w-full ">
-                <p className="text-2xl my-10">BOOKING DETAILS</p>
+                <p className="text-3xl font-secondary">BOOKING DETAILS</p>
 
                 <div className="flex flex-wrap md:flex-nowrap gap-4">
                   <div className="flex flex-col gap-1 w-full">
@@ -122,7 +134,9 @@ const pages = () => {
                     Number of Days: {numDays}
                   </p>
                 )}
-                <p className="text-2xl pt-10 pb-">CONTACT DETAILS</p>
+                <p className="text-2xl pt-10  font-secondary">
+                  CONTACT DETAILS
+                </p>
                 <p className="text-text pb-10">
                   A booking confirmation notification will be sent to the Email
                   you provided
@@ -200,7 +214,7 @@ const pages = () => {
               </div>
             </div>
             <div className="flex flex-col text-secondary">
-              <p className="text-2xl my-10">CHOOSE LODGE</p>
+              <p className="text-2xl my-10 font-secondary">CHOOSE LODGE</p>
               <select
                 className="lodge-select border-2 border-secondary p-2"
                 value={selectedLodge?.id || ""} // Use optional chaining for potential null value
@@ -221,7 +235,9 @@ const pages = () => {
             </div>
             <div className="flex flex-col ">
               <div className="form1 text-secondary space-y-2 w-full ">
-                <p className="text-2xl my-10">CHECK IN/CHECKOUT TIME</p>
+                <p className="text-2xl my-10 font-secondary">
+                  CHECK IN/CHECKOUT TIME
+                </p>
                 <p className="text-text pb-10">
                   You can choose a time that is convenient for you.Early
                   check-in and late check-out service is available at an extra
@@ -255,7 +271,9 @@ const pages = () => {
                     />
                   </div>
                 </div>
-                <p className="text-2xl pt-10 pb-5">Additional Comments</p>
+                <p className="text-2xl pt-10 pb-5 font-secondary">
+                  Additional Comments
+                </p>
 
                 <div className="space-y-10 mb-12">
                   <div className="flex flex-wrap md:flex-nowrap gap-4">
@@ -275,7 +293,9 @@ const pages = () => {
             </div>
             <div className="flex flex-col ">
               <div className="form1 text-secondary space-y-2 w-full ">
-                <p className="text-2xl pt-10 pb-">Methods of payment</p>
+                <p className="text-2xl pt-10 font-secondary">
+                  Methods of payment
+                </p>
                 {selectedLodge && numDays > 0 && (
                   <>
                     <p className="my-4 text-xl">

@@ -13,6 +13,7 @@ import { toast } from "sonner";
 export default function Home() {
   const [width, setWidth] = useState(0);
   const [selectedQuestion, setSelectedQuestion] = useState("HA");
+  console.log(selectedQuestion);
   const carousel = useRef<HTMLDivElement>(null);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -89,7 +90,7 @@ export default function Home() {
             >
               <p className="p-5 bg-secondary/20 sm:w-[500px]">
                 **You bet!** Breakfast is included complimentary with every room
-                booking at The Sunside Oasis.
+                booking at The Sylvan sanctuary.
                 <br /> Enjoy a delicious breakfast buffet served daily at our
                 on-site restaurant, The Saguaro Sunrise. Fuel up for your desert
                 adventures with a variety of fresh options to start your day
@@ -352,7 +353,7 @@ export default function Home() {
                 </div>
               </div>
               <p className="font-semibold text-xl">
-                100$<span className="text-sm text-text2">/day</span>
+                100 $<span className="text-sm text-text2">/day</span>
               </p>
             </div>
             <div className="flex sm:flex-row flex-col gap-4 ">
@@ -406,7 +407,7 @@ export default function Home() {
                 </div>
               </div>
               <p className="font-semibold text-xl">
-                150$<span className="text-sm text-text2">/day</span>
+                150 $<span className="text-sm text-text2">/day</span>
               </p>
             </div>
             <div className="flex sm:flex-row flex-col gap-4 ">
@@ -684,31 +685,58 @@ export default function Home() {
           </p>
         </div>
         <div className="flex flex-col sm:flex-row justify-around px-4 gap-5 sm:gap-0 my-20">
-          <div className="flex gap-4 text-xs text-center sm:text-left mb-5 mx-auto sm:mx-0 sm:text-base sm:flex-col md:text-xl ">
-            <p
-              className={`hover:text-tertiary cursor-pointer transition-color duration-300 ${
-                selectedQuestion === "HA" ? "!text-secondary" : ""
-              }}`}
+          <div className="flex gap-4 text-xs text-center sm:text-left mb-5 mx-auto sm:mx-0 sm:text-base sm:flex-col md:text-xl text-text">
+            <div
+              className={`${
+                selectedQuestion == "HA" ? "text-secondary" : ""
+              }hover:text-tertiary cursor-pointer transition-color duration-300 flex items-center gap-1}`}
               onClick={() => setSelectedQuestion("HA")}
             >
-              HOTEL ACCOMMODATION
-            </p>
-            <p
-              className={`hover:text-tertiary cursor-pointer transition-color duration-300 ${
+              {selectedQuestion == "HA" && (
+                <Image src="/branch1.png" width={40} height={40} alt="branch" />
+              )}
+              <p
+                className={`${
+                  selectedQuestion == "HA" ? "text-secondary" : ""
+                }`}
+              >
+                HOTEL ACCOMMODATION
+              </p>
+            </div>
+            <div
+              className={`hover:text-tertiary cursor-pointer transition-color duration-300 flex items-center gap-1 ${
                 selectedQuestion === "RC" ? "text-tertiary" : ""
               }}`}
               onClick={() => setSelectedQuestion("RC")}
             >
-              RESERVATIONS AND CANCELLATIONS
-            </p>
-            <p
-              className={`hover:text-tertiary cursor-pointer transition-color duration-300 ${
+              {selectedQuestion == "RC" && (
+                <Image src="/branch1.png" width={40} height={40} alt="branch" />
+              )}
+              <p
+                className={`${
+                  selectedQuestion == "RC" ? "text-secondary" : ""
+                }`}
+              >
+                RESERVATIONS AND CANCELLATIONS
+              </p>
+            </div>
+            <div
+              className={`flex items-center gap-1 hover:text-tertiary cursor-pointer transition-color duration-300 ${
                 selectedQuestion === "AS" ? "text-tertiary" : ""
               }}`}
               onClick={() => setSelectedQuestion("AS")}
             >
-              ADDITIONAL SERVICES
-            </p>
+              {selectedQuestion == "AS" && (
+                <Image src="/branch1.png" width={40} height={40} alt="branch" />
+              )}
+              <p
+                className={`${
+                  selectedQuestion == "AS" ? "text-secondary" : ""
+                }`}
+              >
+                ADDITIONAL SERVICES
+              </p>
+            </div>
           </div>
           <div>{renderContent()}</div>
         </div>
@@ -724,7 +752,10 @@ export default function Home() {
               Write your questions here and we will send you an <br /> answer as
               soon as possible
             </p>
-            <form action="" className="my-10 flex flex-col gap-6">
+            <form
+              onSubmit={handleQuestionSubmit}
+              className="my-10 flex flex-col gap-6"
+            >
               <div className="flex flex-col gap-1">
                 <label htmlFor="name" className="text-text2">
                   Full Name*{" "}
@@ -766,7 +797,6 @@ export default function Home() {
               <button
                 type="submit"
                 className="bg-secondary hover:bg-secondary/50  text-white px-12 py-2 self-start font-primary font-medium  "
-                onClick={handleQuestionSubmit}
               >
                 Send
               </button>

@@ -1,21 +1,42 @@
 "use client";
 import { useState } from "react";
-import { useRouter } from "next/router";
-const Hero = () => {
-  const [checkIn, setCheckIn] = useState(new Date());
-  const [checkOut, setCheckOut] = useState(new Date());
-  const [amount, setAmount] = useState(1);
-  // const router = useRouter();
+import { useRouter } from "next/navigation";
+import { toast } from "sonner";
 
+
+const Hero = () => {
+  const [formData, setFormData] = useState({
+    checkIn: "",
+    checkOut: "",
+  });
+  const router = useRouter();
+  console.log(formData);
   const handleSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
-    // const queryParams = new URLSearchParams({
-    //   checkIn: checkIn.toISOString().split("T")[0],
-    //   checkOut: checkOut.toISOString().split("T")[0],
-    //   amount: amount.toString(),
-    // });
-    // router.push(`/book?${queryParams.toString()}`);
+    const { checkIn, checkOut } = formData;
+    // Convert date strings to Date objects
+    const checkInDate = new Date(checkIn);
+    const checkOutDate = new Date(checkOut);
+
+    // Check if Check In time is greater than Check Out time
+    if (checkInDate > checkOutDate) {
+      toast("Check In time cannot be greater than Check Out time");
+      return;
+    }
+
+    router.push(`/book?checkIn=${checkIn}&checkOut=${checkOut}`);
+
+    // Handle form submission logic here
+    setFormData({
+      checkIn: "",
+      checkOut: "",
+    });
   };
+
+  const handleChange = (e: { target: { name: any; value: any } }) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+  const today = new Date().toISOString().split("T")[0];
   return (
     <div className="relative min-h-screen font-secondary ">
       <div className="w-full object-cover object-center h-full absolute top-[-50px] left-0  bg-tertiary/70 z-20"></div>
@@ -38,6 +59,9 @@ const Hero = () => {
               name="checkIn"
               id="checkIn"
               className="input p-2"
+              min={today}
+              onChange={handleChange}
+              value={formData.checkIn}
             />
           </div>
           <div className="flex flex-col gap-1 w-full sm:w-1/4">
@@ -49,19 +73,12 @@ const Hero = () => {
               name="checkOut"
               id="checkOut"
               className="input p-2"
+              min={today}
+              onChange={handleChange}
+              value={formData.checkOut}
             />
           </div>
-          <div className="flex flex-col gap-1 w-full sm:w-1/4">
-            <label htmlFor="amount" className="text-text ">
-              Persons amount
-            </label>
-            <input
-              type="number"
-              name="amount"
-              id="amount"
-              className="input p-2"
-            />
-          </div>
+
           <button
             type="submit"
             className="bg-primary sm:w-1/4 text-black px-12 py-2 self-end font-primary font-medium w-full "
