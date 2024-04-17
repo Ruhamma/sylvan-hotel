@@ -141,7 +141,7 @@ const lodge = () => {
             <div className="flex sm:flex-row flex-col gap-4 ">
               <Link
                 href={`/book?lodgeId=1`}
-                className="bg-secondary hover:bg-secondary/50  text-white px-20 py-2  font-primary font-medium  "
+                className="bg-secondary hover:bg-secondary/50  text-white px-20 py-2  font-primary font-medium text-center "
               >
                 Book
               </Link>
@@ -212,7 +212,7 @@ const lodge = () => {
             <div className="flex sm:flex-row flex-col gap-4 ">
               <Link
                 href={`/book?lodgeId=2`}
-                className="bg-secondary hover:bg-secondary/50  text-white px-20 py-2  font-primary font-medium  "
+                className="bg-secondary hover:bg-secondary/50  text-white px-20 py-2  font-primary font-medium text-center "
               >
                 Book
               </Link>
@@ -270,7 +270,7 @@ const lodge = () => {
             <div className="flex sm:flex-row flex-col gap-4 ">
               <Link
                 href={`/book?lodgeId=3`}
-                className="bg-secondary hover:bg-secondary/50  text-white px-20 py-2  font-primary font-medium  "
+                className="bg-secondary hover:bg-secondary/50  text-white px-20 py-2  font-primary font-medium  text-center"
               >
                 Book
               </Link>
@@ -343,7 +343,7 @@ const lodge = () => {
             <div className="flex sm:flex-row flex-col gap-4 ">
               <Link
                 href={`/book?lodgeId=4`}
-                className="bg-secondary hover:bg-secondary/50  text-white px-20 py-2  font-primary font-medium  "
+                className="bg-secondary hover:bg-secondary/50  text-white px-20 py-2  font-primary font-medium  text-center"
               >
                 Book
               </Link>

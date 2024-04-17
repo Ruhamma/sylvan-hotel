@@ -202,7 +202,7 @@ const CarCamping = () => {
 
         <div className="booking mt-10 flex justify-center  p-10 gap-10 ">
           <div className="w-full lg:w-[60%] ">
-            <div className="horizontal   ">
+            <div className="horizontal">
               <Stepper steps={steps} currentStep={currentStep} />
 
               <div className="sm:p-10 ">

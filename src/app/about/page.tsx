@@ -7,7 +7,10 @@ import React from "react";
 const About = () => {
   return (
     <div className="min-h-screen ">
-      <Banner title="A place to contemplate sunset, de-stress and replenish resources" bgUrl="/aboutHero.jpg"/>
+      <Banner
+        title="A place to contemplate sunset, de-stress and replenish resources"
+        bgUrl="/aboutHero.jpg"
+      />
       <section className="text-black">
         <div className="title p-5 sm:p-10 ">
           <p className="text-text">ABOUT US</p>
@@ -138,32 +141,34 @@ const About = () => {
           </div>
         </div>
       </section>
-      <section id="book" className=" bg-secondary pt-10">
-        <div className="title p-5 sm:p-10 mt-20">
-          <p className="font-secondary text-3xl sm:text-4xl md:tex-5xl lg:text-6xl text-white  text-center">
-            <span className="container2">
-              <span className="content2 pr-4">EXPLORE</span>
-            </span>{" "}
-            THE ECO HOTEL AREA BY
-          </p>
-          <div className="gap-4 flex md:flex-row flex-col items-center justify-center mt-10 text-tertiary ">
-            <button
-              type="submit"
-              className="bg-primary hover:border-2 hover:border-white  sm:w-1/4 md:w-1/6 hover:bg-secondary hover:text-white transition-colors duration-300 px-12 py-2 font-primary font-medium w-full "
-            >
-              SEE SCHEME
-            </button>
-            <button
-              type="submit"
-              className="bg-transparent border-white border-2 sm:w-1/4 md:w-1/6 hover:bg-white hover:text-tertiary text-white transition-colors duration-300 px-12 py-2 font-primary font-medium w-full "
-            >
-              3D TOUR
-            </button>
+      <section id="book" className=" bg-secondary pt-10 leafContainer">
+        <div className="leafContent">
+          <div className="title p-5 sm:p-10 mt-20 ">
+            <p className="font-secondary text-3xl sm:text-4xl md:tex-5xl lg:text-6xl text-white  text-center">
+              <span className="container2">
+                <span className="content2 pr-4">EXPLORE</span>
+              </span>{" "}
+              THE ECO HOTEL AREA BY
+            </p>
+            <div className="gap-4 flex md:flex-row flex-col items-center justify-center mt-10 text-tertiary ">
+              <button
+                type="submit"
+                className="bg-primary hover:border-2 hover:border-white  sm:w-1/4 md:w-1/6 hover:bg-secondary hover:text-white transition-colors duration-300 px-12 py-2 font-primary font-medium w-full "
+              >
+                SEE SCHEME
+              </button>
+              <button
+                type="submit"
+                className="bg-transparent border-white border-2 sm:w-1/4 md:w-1/6 hover:bg-white hover:text-tertiary text-white transition-colors duration-300 px-12 py-2 font-primary font-medium w-full "
+              >
+                3D TOUR
+              </button>
+            </div>
           </div>
-        </div>
 
-        <div className="dome2 mt-10 h-[40rem] flex items-center justify-center ">
-          <div className="w-[50%] flex flex-col justify-center items-center gap-4"></div>
+          <div className="dome2 mt-10 h-[40rem] flex items-center justify-center ">
+            <div className="w-[50%] flex flex-col justify-center items-center gap-4"></div>
+          </div>
         </div>
       </section>
     </div>
