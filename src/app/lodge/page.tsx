@@ -21,7 +21,7 @@ const lodge = () => {
   };
   const handleSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
-    toast(`Thanks for the comment!.`);
+    toast(`Thanks for the comment!`);
     setFormData({
       name: "",
       email: "",
