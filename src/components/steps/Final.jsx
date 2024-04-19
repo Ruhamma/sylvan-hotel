@@ -3,7 +3,6 @@ import Link from "next/link";
 
 export default function Final() {
   const { userData, setUserData } = useStepperContext();
-  console.log(userData);
   function calculateDaysBetweenDates(startDate, endDate) {
     // Convert strings to Date objects
     const startDateObj = new Date(startDate);
@@ -25,9 +24,7 @@ export default function Final() {
     userData.checkOut
   );
 
-  if (daysBetween !== null) {
-    console.log("Number of days between check-in and check-out:", daysBetween);
-  }
+  
   return (
     <div className="container md:mt-10">
       <div className="flex flex-col items-center">

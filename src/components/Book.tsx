@@ -96,7 +96,6 @@ const Book = () => {
     return numDays;
   };
 
-  console.log(checkIn, checkOut, numDays);
   const handleSubmit = (event: { preventDefault: () => void }) => {
     event.preventDefault();
     // Handle form submission logic here (e.g., send data to server)

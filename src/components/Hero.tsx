@@ -3,14 +3,13 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 
-
+import { motion } from "framer-motion";
 const Hero = () => {
   const [formData, setFormData] = useState({
     checkIn: "",
     checkOut: "",
   });
   const router = useRouter();
-  console.log(formData);
   const handleSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
     const { checkIn, checkOut } = formData;
@@ -42,10 +41,15 @@ const Hero = () => {
       <div className="w-full object-cover object-center h-full absolute top-[-50px] left-0  bg-tertiary/70 z-20"></div>
       <div className=" absolute top-[-50px] left-0 hero w-full object-contain object-center h-full z-0"></div>
       <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] font-secondary z-20 flex  flex-col w-[90%] sm:w-[70%]">
-        <p className="text-4xl md:text-7xl sm:text-5xl leading-10 text-center px-2 mt-10 sm:mt-0">
+        <motion.p
+          initial={{ scale: 0.5, opacity: 0.5 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 1, ease: "easeOut" }}
+          className="text-4xl md:text-7xl sm:text-5xl leading-10 text-center px-2 mt-10 sm:mt-0"
+        >
           YOUR BEST PLACE TO RELAX ALONE
           <br /> WITH NATURE
-        </p>
+        </motion.p>
         <form
           onSubmit={handleSubmit}
           className="font-primary  flex sm:flex-row flex-col flex-wrap lg:flex-nowrap items-center justify-center gap-6 mt-10 w-[90%] mx-auto sm:mx-0 sm:w-full"

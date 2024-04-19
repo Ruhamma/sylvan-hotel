@@ -18,7 +18,6 @@ const CarCamping = () => {
   const { userData } = useStepperContext();
 
   useEffect(() => {
-    console.log("Current userData:", userData);
   }, [userData]);
   const steps = [" ", " ", " ", " "];
 

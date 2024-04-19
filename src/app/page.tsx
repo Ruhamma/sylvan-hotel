@@ -13,7 +13,6 @@ import { toast } from "sonner";
 export default function Home() {
   const [width, setWidth] = useState(0);
   const [selectedQuestion, setSelectedQuestion] = useState("HA");
-  console.log(selectedQuestion);
   const carousel = useRef<HTMLDivElement>(null);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
