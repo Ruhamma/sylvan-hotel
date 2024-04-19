@@ -3,14 +3,27 @@ import Hero from "@/components/Hero";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
     <div className="min-h-screen ">
-      <Banner
+      {/* <Banner
         title="A place to contemplate sunset, de-stress and replenish resources"
         bgUrl="/aboutHero.jpg"
-      />
+      /> */}
+      <div className="relative min-h-[90vh] font-secondary h-fit ">
+        <div className="w-full object-cover object-center h-[90vh] absolute top-[-50px] left-0  bg-tertiary/70 z-20"></div>
+        <div
+          style={{ backgroundImage: `url(/aboutHero.jpg)` }}
+          className=" absolute top-[-50px] left-0  bg-cover w-full h-[90vh] object-contain object-center  z-0"
+        ></div>
+        <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-90%] sm:translate-y-[-50%] font-secondary z-20 flex  flex-col w-[90%] sm:w-[70%] ">
+          <p className="text-4xl lg:text-7xl sm:text-5xl leading-10 text-center px-2 ">
+            A place to contemplate sunset, de-stress and replenish resources
+          </p>
+        </div>
+      </div>
       <section className="text-black">
         <div className="title p-5 sm:p-10 ">
           <p className="text-text">ABOUT US</p>

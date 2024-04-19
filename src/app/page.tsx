@@ -7,7 +7,6 @@ import { IoPersonOutline } from "react-icons/io5";
 import { MdStarRate } from "react-icons/md";
 import { useRef, useEffect, useState } from "react";
 import Collapsible from "react-collapsible";
-
 import { motion } from "framer-motion";
 import { toast } from "sonner";
 export default function Home() {
@@ -277,7 +276,12 @@ export default function Home() {
             </span>
             TO
           </h2>
-          <div className="flex mx-auto items-center justify-center sm:mt-5 mt-2 gap-[-9px] sm:flex-row flex-col ">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 2 }}
+            className="flex mx-auto items-center justify-center sm:mt-5 mt-2 gap-[-9px] sm:flex-row flex-col "
+          >
             <div className="flex flex-col p-20 justify-center items-center md:h-90 md:w-90 lg:h-96 lg:w-96 h-64 w-64 border-text rounded-full border-2 translate-y-[25%] sm:translate-y-0 sm:translate-x-[10%]">
               <h3 className="text-xl sm:text-2xl    text-center text-secondary">
                 CONTEMPLATE SUNSETS
@@ -293,9 +297,14 @@ export default function Home() {
                 REPLENISH <br /> RESOURCE
               </h3>
             </div>
-          </div>
+          </motion.div>
         </div>
-        <div className="flex flex-col items-center justify-center w-full gap-4">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 2 }}
+          className="flex flex-col items-center justify-center w-full gap-4"
+        >
           <p className="text-text2 mx-auto w-[85%] sm:w-[50%] md:w-[35%] leading-6 sm:my-10 my-5 text-center">
             Nestled amidst a vibrant mountain forest within the Reserve, Sylvan
             invites you to experience a haven of sustainable living. Choose from
@@ -312,9 +321,15 @@ export default function Home() {
             <p> READ MORE</p>
             <Image src="/branch2.png" width={40} height={40} alt="branch" />
           </Link>
-        </div>
+        </motion.div>
       </section>
-      <section id="lodges" className="py-10 text-black ">
+      <motion.section
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1 }}
+        id="lodges"
+        className="py-10 text-black "
+      >
         <div className="title p-5 sm:p-10">
           <p className="text-text">LODGES</p>
           <p className="font-secondary text-3xl sm:pt-0 pt-10 font-semibold sm:font-normal sm:text-5xl lg:text-7xl sm:text-right sm:pr-20 ">
@@ -436,7 +451,7 @@ export default function Home() {
             <Image src="/branch2.png" width={40} height={40} alt="branch" />
           </Link>
         </div>
-      </section>
+      </motion.section>
       <section id="testimonial" className="pb-10 text-black  ">
         <div className="title p-5 sm:p-10">
           <p className="text-text">SERVICES</p>
@@ -453,7 +468,12 @@ export default function Home() {
           </p>
         </div>
         <div className="flex sm:flex-row flex-col text-tertiary gap-10 justify-center items-end p-10 w-full">
-          <div className="flex flex-col  w-full sm:w-[25%]">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            className="flex flex-col  w-full sm:w-[25%]"
+          >
             <Image
               src="/cc.jpg"
               alt="lodge1"
@@ -470,8 +490,13 @@ export default function Home() {
                 Read More
               </Link>
             </div>
-          </div>
-          <div className="flex flex-col w-full sm:w-[25%]">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1.5 }}
+            className="flex flex-col w-full sm:w-[25%]"
+          >
             <Image
               src="/yoga.jpg"
               alt="lodge1"
@@ -480,8 +505,13 @@ export default function Home() {
               className="w-full h-[20rem] sm:h-[25rem] object-cover"
             />
             <p className="font-semibold ">YOGA CENTER </p>
-          </div>
-          <div className="flex flex-col w-full sm:w-[25%]">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 2 }}
+            className="flex flex-col w-full sm:w-[25%]"
+          >
             <Image
               src="/cafe.jpg"
               alt="lodge1"
@@ -490,7 +520,7 @@ export default function Home() {
               className="w-full h-[20rem] sm:h-[20rem] object-cover"
             />
             <p className="font-semibold ">CAFE</p>
-          </div>
+          </motion.div>
         </div>
       </section>
       <section

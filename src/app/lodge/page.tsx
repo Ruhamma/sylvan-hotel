@@ -9,7 +9,7 @@ import { FaDoorOpen } from "react-icons/fa6";
 import { IoBed, IoPersonOutline } from "react-icons/io5";
 import { LuShowerHead } from "react-icons/lu";
 import { toast } from "sonner";
-
+import {motion} from "framer-motion";
 const lodge = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -34,7 +34,12 @@ const lodge = () => {
         title="ALL THE LODGES ARE CAREFULLY INTEGRATED INTO NATURE RESERVE"
         bgUrl="/lodgeHero.jpg"
       />
-      <div className="title p-5 sm:p-10 ">
+      <motion.div
+        initial={{ opacity: 0.5, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 3 }}
+        className="title p-5 sm:p-10"
+      >
         <p className="text-text">LODGES</p>
         <div className="font-secondary space-y-3 text-3xl sm:pt-0 pt-10 font-semibold sm:font-light sm:text-5xl lg:text-6xl sm:text-right sm:pr-20 text-black ">
           <p className="leading-snug">
@@ -50,7 +55,7 @@ const lodge = () => {
             AND THE RESERVE
           </p>
         </div>
-      </div>
+      </motion.div>
       <section className="text-text space-y-10 sm:space-y-20">
         <div className="flex sm:flex-row flex-col justify-start item-center w-full gap-10 lg:gap-40 px-6 sm:px-10">
           <div className="pt-2 sm:p-5 lg:w-[30%] space-y-2">

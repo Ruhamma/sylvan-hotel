@@ -7,6 +7,8 @@ import Account from "@/components/steps/Account.jsx";
 import Details from "@/components/steps/Details.jsx";
 import Payment from "@/components/steps/Payment.jsx";
 import Final from "@/components/steps/Final.jsx";
+import { motion } from "framer-motion";
+
 import {
   UseContextProvider,
   useStepperContext,
@@ -17,8 +19,7 @@ const CarCamping = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const { userData } = useStepperContext();
 
-  useEffect(() => {
-  }, [userData]);
+  useEffect(() => {}, [userData]);
   const steps = [" ", " ", " ", " "];
 
   const displayStep = (step: number) => {
@@ -45,7 +46,12 @@ const CarCamping = () => {
 
   return (
     <div className="min-h-screen">
-      <div className="title px-5 pt-5 sm:px-10 sm:pt-10 mt-20 text-black ">
+      <motion.div
+        initial={{ opacity: 0.5, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1 }}
+        className="title px-5 pt-5 sm:px-10 sm:pt-10 mt-20 text-black "
+      >
         <p className="text-text">CONTACTS</p>
         <div className="sm:hidden block font-secondary font-semibold text-3xl sm:pt-0 pt-5  sm:font-normal sm:text-5xl lg:text-7xl sm:text-right sm:pr-20">
           ON YOUR MOTORHOME A MEMORABLE TIME WILL BE CAR CAMPING OF OUR HOTEL
@@ -68,7 +74,7 @@ const CarCamping = () => {
           </p>
           <p className="sm:text-right">OF OUR HOTEL</p>
         </div>
-      </div>
+      </motion.div>
       <section className=" text-black px-5">
         <div className="flex sm:flex-row flex-col gap-5 sm:gap-16  sm:items-center justify-center mx-auto w-full">
           <div className="lg:w-[35%] sm:h-fit 2xl:h-full flex flex-col sm:gap-10  md:gap-40 justify-start">
@@ -122,7 +128,12 @@ const CarCamping = () => {
         </div>
       </section>
       <section className=" text-black px-5">
-        <div className="title pt-5 sm:px-10 sm:pt-10 mt-20 text-black ">
+        <motion.div
+          initial={{ opacity: 0.5, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1 }}
+          className="title pt-5 sm:px-10 sm:pt-10 mt-20 text-black "
+        >
           <div className="sm:hidden block font-secondary font-semibold text-3xl sm:pt-0 pt-5  sm:font-normal sm:text-5xl lg:text-7xl sm:text-right ">
             THE VIEW FROM THE CAR PARK WILL LEAVE MEMORABLE EFFECT IN YOUR
             MEMORY
@@ -138,7 +149,7 @@ const CarCamping = () => {
             </p>
             <p className="sm:text-right">IN YOUR MEMORY</p>
           </div>
-        </div>
+        </motion.div>
         <div className="flex sm:flex-row flex-col gap-5 sm:gap-16  sm:items-center justify-center mx-auto w-full">
           <div className="lg:w-[35%] sm:h-fit 2xl:h-full flex flex-col sm:gap-10  md:gap-40 justify-start">
             <div>
