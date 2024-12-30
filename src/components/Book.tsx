@@ -326,7 +326,7 @@ const Book = () => {
                 )}
                 <p className="text-text pb-10">
                   Visa,Visa Electron,Mastercard,Maestro,American Express,Union
-                  Pay,JCB
+                  Pay,JCB,Telebirr
                 </p>
 
                 <div className="space-y-6 pt-5">
@@ -342,6 +342,13 @@ const Book = () => {
                     <input type="radio" name="payment" id="check4" />
                     <label htmlFor="check4">
                       100% prepayment by cash at accommodation on the territory
+                    </label>
+                  </div>
+                  <div className="p-2 py-4 bg-secondary/10 flex items-center gap-2 cursor-pointer">
+                    <input type="radio" name="payment" id="check5" />
+
+                    <label htmlFor="check5">
+                      100% prepayment by Telebirr
                     </label>
                   </div>
                   <div className="p-2 py-4 bg-black/5 flex items-center gap-2 cursor-pointer relative">
