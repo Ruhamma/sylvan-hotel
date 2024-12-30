@@ -12,7 +12,7 @@ export default function Payment() {
       <div className="form1 text-white space-y-2 w-full ">
         <p className="text-2xl pt-10 pb-">Methods of payment</p>
         <p className="text-text pb-10">
-          Visa,Visa Electron,Mastercard,Maestro,American Express,Union Pay,JCB
+          Visa,Visa Electron,Mastercard,Maestro,American Express,Union Pay,JCB,Telebirr
         </p>
 
         <div className="space-y-6 pt-5">
@@ -27,6 +27,12 @@ export default function Payment() {
             <input type="radio" name="payment" id="check4" />
             <label htmlFor="check4">
               100% prepayment by cash at accommodation on the territory
+            </label>
+          </div>
+           <div className="p-2 py-4 bg-white/10 flex items-center gap-2 cursor-pointer">
+            <input type="radio" name="payment" id="check4" />
+            <label htmlFor="check4">
+              100% prepayment by Telebirr
             </label>
           </div>
           <div className="p-2 py-4 bg-black/5 flex items-center gap-2 cursor-pointer relative">
