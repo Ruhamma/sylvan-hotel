@@ -1,0 +1,29 @@
+[33m800544f[m[33m ([m[1;36mHEAD -> [m[1;32missue-2[m[33m, [m[1;31morigin/issue-2[m[33m)[m Merge branch 'issue-2' of https://github.com/Ruhamma/sylvan-hotel into issue-2
+[33m9e2f355[m Merge branch 'main' of https://github.com/Ruhamma/sylvan-hotel into issue-2
+[33mf2e2f11[m Fixes #2: changes backgound image on the lodge page
+[33m9750c22[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Merge pull request #5 from Ruhamma/feature/telebirr-payment-booking-page
+[33m2e860d4[m Fixes #4: changed the background image of lodge page
+[33m1a7a342[m[33m ([m[1;31morigin/issue-4[m[33m, [m[1;32missue-4[m[33m)[m Fixes #4: changed the background image of lodge page
+[33mc0f91c9[m[33m ([m[1;31morigin/feature/telebirr-payment-booking-page[m[33m)[m Update Book.tsx
+[33m833c929[m[33m ([m[1;32mmain[m[33m)[m Add animation to Banner and About components
+[33mf0e5da7[m Add animation
+[33m08fd9c8[m Update styles in about/page.tsx and car-camping/page.tsx
+[33m2864c7b[m Edit booking page
+[33m7dade32[m Add suspense
+[33m88aa6bc[m Add suspense and loading page
+[33m2cb252e[m Update layout component and add meta tags
+[33m1f62024[m Refactor getQueryStringParameter function to use useSearchParams hook in page.tsx
+[33m9385066[m Refactor StepperContext import path in car-camping/page.tsx
+[33m62b69be[m Update date input styles to use full width in multiple components
+[33m7f66bfa[m Update styles and dependencies
+[33mdd97f01[m Update lodges page
+[33m7adf7bb[m Edit Booking page logic
+[33me33c9c8[m update Home page add notifications fiz nav bar transparency
+[33mf494776[m Add Booking component
+[33medb9cb8[m Add car camping page
+[33m06a0512[m Add lodge page
+[33md176a21[m Add Home page
+[33m8c1060d[m Add footer component to layout
+[33m43f0401[m Add navigation bar
+[33m6aad240[m Add fonts and colors
+[33m3f0efe2[m initial commit
