@@ -9,7 +9,7 @@ import { FaDoorOpen } from "react-icons/fa6";
 import { IoBed, IoPersonOutline } from "react-icons/io5";
 import { LuShowerHead } from "react-icons/lu";
 import { toast } from "sonner";
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
 const lodge = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -32,7 +32,7 @@ const lodge = () => {
     <div className="min-h-screen ">
       <Banner
         title="ALL THE LODGES ARE CAREFULLY INTEGRATED INTO NATURE RESERVE"
-        bgUrl="/lodgeHero.jpg"
+        bgUrl="/lodgebackground.jpg"
       />
       <motion.div
         initial={{ opacity: 0.5, scale: 0.95 }}
