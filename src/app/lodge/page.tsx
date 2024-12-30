@@ -32,7 +32,7 @@ const lodge = () => {
     <div className="min-h-screen ">
       <Banner
         title="ALL THE LODGES ARE CAREFULLY INTEGRATED INTO NATURE RESERVE"
-        bgUrl="/lodgebackground.jpg"
+        bgUrl="/lodgebackground1.jpg"
       />
       <motion.div
         initial={{ opacity: 0.5, scale: 0.95 }}
